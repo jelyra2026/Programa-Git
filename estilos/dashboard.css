@@ -1,0 +1,171 @@
+
+/*JELYRA - DISEÑO DEL PANEL PRINCIPAL */
+
+/* Organización general de la aplicación */
+
+#aplicacion {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Menú lateral */
+
+.menu-lateral {
+    width: 250px;
+    background: #56328D;
+    color: white;
+    padding: 25px 18px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.marca {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.marca h2 {
+    color: white;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+.marca small {
+    color: #E4D8F4;
+}
+
+/* Opciones del menú */
+
+.menu-lateral nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.opcion-menu {
+    background: transparent;
+    color: white;
+    text-align: left;
+    padding: 13px;
+    border-radius: 8px;
+}
+
+.opcion-menu:hover,
+.opcion-menu.activa {
+    background: #8056B8;
+}
+
+/* Botón cerrar sesión */
+
+.btn-cerrar {
+    margin-top: auto;
+    padding: 12px;
+    background: #E9DDF6;
+    color: #56328D;
+    border-radius: 8px;
+}
+
+/* Contenido principal */
+
+.contenido {
+    flex: 1;
+    padding: 30px;
+    min-width: 0;
+}
+
+/* Encabezado */
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+.encabezado h1 {
+    margin-bottom: 5px;
+}
+
+.usuario {
+    background: #F0EAF8;
+    color: #56328D;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+/* Tarjetas del panel */
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.tarjeta {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid #E6DDEF;
+    box-shadow: 0 4px 12px rgba(50, 30, 80, 0.05);
+}
+
+.tarjeta h3 {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.tarjeta strong {
+    color: #8056B8;
+    font-size: 32px;
+}
+
+.tarjeta p {
+    color: #77717F;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+/* Panel de acciones */
+
+.panel {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    margin-top: 25px;
+    border: 1px solid #E6DDEF;
+}
+
+.panel h3 {
+    margin-bottom: 18px;
+}
+
+/* Adaptación para pantallas pequeñas */
+
+@media (max-width: 800px) {
+
+    #aplicacion {
+        flex-direction: column;
+    }
+
+    .menu-lateral {
+        width: 100%;
+    }
+
+    .menu-lateral nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .contenido {
+        padding: 20px;
+    }
+}

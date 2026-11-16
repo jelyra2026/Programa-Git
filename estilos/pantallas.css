@@ -1,0 +1,152 @@
+/* Diseño de las pantallas internas de JELYRA */
+
+/* Secciones de contenido */
+.seccion {
+    width: 100%;
+    animation: aparecer 0.3s ease;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Títulos y descripciones */
+.seccion h2 {
+    margin-bottom: 10px;
+}
+
+.seccion p {
+    color: var(--gris);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Formularios */
+.formulario-validacion {
+    background: var(--blanco);
+    padding: 25px;
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+input[type="file"] {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin: 15px 0;
+    border: 1px dashed var(--violeta);
+    border-radius: 8px;
+    background: var(--lila);
+}
+
+/* Resultados y mensajes */
+#resultado-validacion {
+    margin-top: 20px;
+}
+
+.resultado {
+    padding: 16px;
+    border-radius: 8px;
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+.resultado.exito {
+    background: #E6F5EA;
+    color: #236B38;
+}
+
+.resultado.error {
+    background: #FCE8E8;
+    color: #A52A2A;
+}
+
+/* Tablas */
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+    background: var(--blanco);
+    border-radius: 12px;
+    border: 1px solid var(--borde);
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 550px;
+}
+
+th {
+    background: var(--lila);
+    color: var(--morado);
+    text-align: left;
+    padding: 15px;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid var(--borde);
+    color: var(--texto);
+}
+
+tbody tr:hover {
+    background: #FAF8FD;
+}
+
+/* Botones de detalle */
+.btn-detalle {
+    background: var(--lila);
+    color: var(--morado);
+    border: none;
+    padding: 9px 14px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-detalle:hover {
+    background: var(--violeta);
+    color: var(--blanco);
+}
+
+/* Panel de detalle */
+#detalle {
+    background: var(--blanco);
+    padding: 25px;
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+#detalle h2 {
+    margin-bottom: 15px;
+}
+
+#detalle-descripcion,
+#detalle-recomendacion {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 600px) {
+    .formulario-validacion,
+    #detalle {
+        padding: 18px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+}

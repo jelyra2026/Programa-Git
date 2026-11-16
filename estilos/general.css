@@ -1,0 +1,114 @@
+/* ESTILOS GENERALES DE JELYRA */
+
+:root {
+    --morado: #56328D;
+    --violeta: #8056B8;
+    --lila: #F0EAF8;
+    --blanco: #FFFFFF;
+    --texto: #34264A;
+    --gris: #77717F;
+    --borde: #E6DDEF;
+    --fondo: #F8F6FB;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    color: var(--morado);
+}
+
+p {
+    line-height: 1.6;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+.oculto {
+    display: none !important;
+}
+
+.pantalla {
+    min-height: 100vh;
+}
+
+.btn-principal {
+    background: var(--morado);
+    color: var(--blanco);
+    padding: 12px 20px;
+    border-radius: 9px;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.btn-principal:hover {
+    background: var(--violeta);
+    transform: translateY(-1px);
+}
+
+.btn-secundario {
+    background: var(--lila);
+    color: var(--morado);
+    padding: 12px 20px;
+    border-radius: 9px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.btn-secundario:hover {
+    background: #E2D5F2;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    outline: none;
+    margin: 8px 0 16px;
+    background: var(--blanco);
+}
+
+input:focus {
+    border-color: var(--violeta);
+    box-shadow: 0 0 0 3px rgba(128, 86, 184, 0.13);
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.mensaje {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    .btn-principal,
+    .btn-secundario {
+        width: 100%;
+    }
+}
